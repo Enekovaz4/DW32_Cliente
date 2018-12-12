@@ -1,0 +1,197 @@
+/******************************************************************CSS GLOBAL*/
+
+/********SPRITES*/
+
+.icono {
+	background-image: url("img/iconos.png");
+	background-repeat: no-repeat;
+	line-height: 32px;
+}
+#libro {
+	background-position: -503px -215px;
+	width: 36px;
+	height: 36px;
+}
+#lupa {
+	background-position: -433px -287px;
+	width: 36px;
+	height: 36px;
+}
+#diario {
+	background-position: -325px -35px;
+	width: 36px;
+	height: 36px;
+}
+#libroflecha {
+	background-position: -285px -250px;
+	width: 36px;
+	height: 36px;
+}
+/***********/
+
+/**********POSICIONAMIENTO DE ELEMENTOS*/
+
+.center {
+	text-align: center;
+}
+.right {
+	float: right;
+}
+.wMitad(){
+	width: 75%;
+}
+
+.inline {
+	display: inline-block; 
+}
+
+/************/
+
+
+
+/********************************************************************************ESTILO CONTENEDORES GLOBAL*/
+
+div.container {
+	background-color: #b3ffff;
+	width: 48%;
+	height: 44vh;
+	min-height: auto;
+	margin: 5px;
+	margin-bottom:1px;
+	padding-bottom: 30px;
+	display: inline-grid;
+	padding-top: 5px;
+	overflow-y: scroll;
+	border:#3377ff 1px solid;
+}
+div.containerInterior {
+	margin: 10px;
+}
+
+/**************************************/
+
+/**************************************CONTENEDOR NUEVO LIBRO*/ 
+
+#nuevoLibro input.inputfield {
+	margin: 5px 5px;
+	width: 80%;
+}
+#nuevoLibro input.generos {
+	margin: 5px 10px;
+
+}
+
+/*****************************************/
+
+/**************************************CONTENEDOR CONSULTAR LIBRO*/ 
+
+#consultarLibro input.inputfield {
+	margin: 0px 5px;
+	padding: 0px;
+	width: 80%;
+}
+#consultarLibro input.inputfieldInline {
+	margin: 5px 5px;
+	width: 40%;
+	display: inline-block;
+}
+#consultarLibro input.generos {
+	margin: 5px 10px;
+
+}
+#consultarLibro textarea {
+	width: 90%;
+	min-height: 50px;
+}
+
+#consultarLibro input.submit {
+	margin: 5px;
+}
+
+/*****************************************/
+
+/**************************************CONTENEDOR DISPONIBLES*/ 
+
+#disponibles div.lista {
+	max-width: 95%;
+	max-height: 95%;
+
+	min-width: 90%;
+	
+	height: 80%;
+	margin: auto;
+	background-color: white;
+
+}
+
+#disponibles p.libro {
+	padding: 10px 10px;
+	margin: 0px 0px;
+
+}	
+
+	#disponibles p.libro:hover {
+		background-color: lightgrey;
+		color: darkgrey;
+		cursor: pointer;
+	}
+
+#disponibles p.creado{
+	background-color: pink;
+	border:magenta solid 1px;
+}
+
+#disponibles p.devuelto{
+	background-color: lightgreen;
+	border:green solid 1px;
+}
+
+#disponibles p.seleccionado, #prestados p.seleccionado{
+	border:black solid 2px;
+	background-color: blue;
+	color: white;
+	font-weight: bolder;
+	text-align: center;
+}
+
+/*****************************************/
+
+/**************************************CONTENEDOR PRESTADOS*/ 
+
+#prestados div.lista {
+	max-width: 95%;
+	max-height: 95%;
+
+	min-width: 90%;
+	min-height: 20vh;
+	margin: auto;
+	background-color: white;
+	height: 80%;
+}
+
+#prestados p.libro {
+	padding: 10px 10px;
+	margin: 0px 0px;
+
+}
+
+#prestados p.libro:hover {
+	background-color: lightgrey;
+	color: darkgrey;
+	cursor: pointer;
+}
+
+#prestados p.prestado{
+	background-color: salmon;
+	border:green solid 1px;
+}
+
+/*****************************************/
+
+/*******************************************ERRORES DE FORMULARIO*/
+
+.error{
+	background-color: salmon;
+}
+
+/********************************************/

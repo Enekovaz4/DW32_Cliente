@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="index.css">
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="js/index2.js"></script>
+	<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+</head>
+<body>
+<!-- NUEVO LIBRO CONTAINER -->
+	<div class="container" id="nuevoLibro">
+		<div class="containerInterior">
+			<h1 class="center">Nuevo Libro <img id="libro" class="icono inline"></h1>
+
+	<!-- FORMULARIO -->
+			
+		<!-- NUEVO LIBRO -->
+				<p><label>Título</label><input type="text" name="tituloInsertar" required class="inputfield" value="titulo"></p>
+
+				<p><label>Autor</label><input type="text" name="autorInsertar" required class="inputfield" value="autor"></p>
+
+				<p><label>ISBN</label><input type="number" name="isbnInsertar" required class="inputfield" value="123"></p>
+
+				<div class="">
+					<p>Géneros:</p>
+
+					<p class="inline"><input class="generos" type="checkbox" name="generoInsertar" value="policiaca" checked=""><label>Policíaca</label></p>
+					<p class="inline"><input class="generos" type="checkbox" name="generoInsertar" value="historica"><label>Histórica</label></p>
+					<p class="inline"><input class="generos" type="checkbox" name="generoInsertar" value="ciencia_ficcion"><label>Ciencia Ficción</label></p>
+
+					<p class="inline"><input class="generos" type="checkbox" name="generoInsertar" value="fantastica"><label>Fantástica</label></p>
+					<p class="inline"><input class="generos" type="checkbox" name="generoInsertar" value="romantica"><label>Romántica</label></p> 
+
+					<br>
+				</div>
+
+				<button id="addLibroSubmit" onclick="insertarLibro();" class="right">Añadir</button>
+
+			
+		</div>
+	</div>
+<!-- CONSULTAR LIBRO CONTAINER -->	
+	<div class="container" id="consultarLibro">
+		<div class="containerInterior">
+			<h1 class="center">Consultar Libro <img id="lupa" class="icono inline"></h1>
+
+	<!-- FORMULARIO -->
+			
+		<!-- CONSULTAR LIBRO -->
+				<label>Título</label><input type="text" name="titulo" required class="inputfield" id="titulo_consultar" disabled=""></p>
+
+				<p class="inline">
+					<label>Autor</label>
+					<input type="text" name="autor" disabled="">
+				</p>
+				<p class="inline">
+					<label>ISBN</label>
+					<input type="number" name="isbn" disabled="">
+				</p>
+
+				<p>Géneros:</p>
+				<textarea rows="3" name="generos" disabled=""></textarea>
+
+				<p>Prestado a:</p>
+				<input type="email" name="prestadoa">
+
+				<input type="hidden" name="id">
+
+				<br>
+
+				<button class="right submit" id="devolver" onclick="devolverLibro();">Devolver</button>
+				<button class="right submit" id="prestar" onclick="prestarLibro();">Prestar</button>
+			
+		</div>
+
+
+	</div>
+	<div class="container" id="disponibles">
+		<div class="containerInterior">
+		<h1 class="center"> Disponibles <img id="diario" class="icono inline"></h1>
+
+		<div class="lista" id="listaDisponibles">
+
+		</div>
+		</div>
+	</div>
+	<div class="container" id="prestados">
+		
+		<div class="containerInterior">
+			<h1 class="center"> Préstamos <img id="libroflecha" class="icono inline"></h1>
+
+			<div class="lista" id="listaPrestados">
+			</div>
+		</div>
+
+	</div>
+
+</body>
+</html>
